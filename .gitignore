@@ -1,0 +1,7 @@
+# Packages/backups
+*.zip
+*.tar.gz
+
+# Compiled object files
+*.exe
+*.bin
