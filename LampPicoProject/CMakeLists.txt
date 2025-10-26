@@ -35,7 +35,9 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(LampPicoProject LampPicoProject.c )
+add_executable(LampPicoProject
+    LampPicoProject.c
+    led_update.c)
 
 pico_set_program_name(LampPicoProject "LampPicoProject")
 pico_set_program_version(LampPicoProject "0.1")
@@ -46,7 +48,8 @@ pico_enable_stdio_usb(LampPicoProject 1)
 
 # Add the standard library to the build
 target_link_libraries(LampPicoProject
-        pico_stdlib)
+        pico_stdlib
+        pico_rand)
 
 # Add the standard include files to the build
 target_include_directories(LampPicoProject PRIVATE
@@ -54,7 +57,7 @@ target_include_directories(LampPicoProject PRIVATE
 )
 
 # Add any user requested libraries
-target_link_libraries(LampPicoProject 
+target_link_libraries(LampPicoProject
         hardware_clocks
         hardware_pwm
         hardware_adc
