@@ -47,6 +47,9 @@
 #define LED_TASK_PERIOD_MS 20
 #define KNOB_TASK_PERIOD_MS 100
 
+// Set to 1 to enable debug output
+#define DEBUG 1
+
 // Error codes
 typedef enum {
     NO_ERROR = 0,
