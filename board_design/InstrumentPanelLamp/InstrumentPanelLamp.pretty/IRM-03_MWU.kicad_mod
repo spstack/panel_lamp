@@ -5,7 +5,7 @@
 	(layer "F.Cu")
 	(tags "IRM-03-5 ")
 	(property "Reference" "REF**"
-		(at 8.89 15.243899 0)
+		(at 3.7 -4.5 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "1f3ba24e-16ed-4b3d-a2f0-1a6dcede5c49")
@@ -17,7 +17,7 @@
 		)
 	)
 	(property "Value" "IRM-03_MWU"
-		(at 8.89 15.243899 0)
+		(at 19.6 2.4 90)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "d560ae46-16ef-41e5-b31e-b51f4a103658")
@@ -196,21 +196,10 @@
 		(uuid "af9b93a2-ddd0-4207-87bd-e0ff0603044c")
 	)
 	(fp_text user "*"
-		(at 0 -8.213336 0)
+		(at -2.7 -4.4 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "42c921f6-659e-4203-a9cf-5bde06cb7056")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(fp_text user "*"
-		(at 0 -8.213336 0)
-		(layer "F.SilkS")
-		(uuid "eb87c0b1-63d7-452f-8bd0-415f24c27977")
 		(effects
 			(font
 				(size 1 1)
@@ -242,7 +231,7 @@
 		)
 	)
 	(fp_text user "${REFERENCE}"
-		(at 8.89 15.243899 0)
+		(at 19.6 14.4 90)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "9ec3246a-741f-4a4d-9692-5842d715ead5")
@@ -255,7 +244,7 @@
 	)
 	(pad "1" thru_hole circle
 		(at 0 0)
-		(size 1.4732 1.4732)
+		(size 2 2)
 		(drill 0.9652)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -263,7 +252,7 @@
 	)
 	(pad "3" thru_hole circle
 		(at 0 5.08)
-		(size 1.4732 1.4732)
+		(size 2 2)
 		(drill 0.9652)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -271,7 +260,7 @@
 	)
 	(pad "13" thru_hole circle
 		(at 0 30.48)
-		(size 1.4732 1.4732)
+		(size 2 2)
 		(drill 0.9652)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -279,7 +268,7 @@
 	)
 	(pad "14" thru_hole circle
 		(at 17.78 30.48)
-		(size 1.4732 1.4732)
+		(size 2 2)
 		(drill 0.9652)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -287,7 +276,7 @@
 	)
 	(pad "16" thru_hole circle
 		(at 17.78 25.4)
-		(size 1.4732 1.4732)
+		(size 2 2)
 		(drill 0.9652)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)

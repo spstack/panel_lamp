@@ -5,7 +5,7 @@
 	(layer "F.Cu")
 	(tags "OSTYK51102030 ")
 	(property "Reference" "REF**"
-		(at -8.4 -2 0)
+		(at -6.8 -4.3 90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "7175dbbd-6d54-4f1b-84e0-ac24d4a00ccb")
@@ -94,8 +94,8 @@
 		(uuid "61a32419-64dd-46ec-b663-2b1f2205b84b")
 	)
 	(fp_circle
-		(center -7.657902 0)
-		(end -7.276902 0)
+		(center -6.8 0.1)
+		(end -6.419 0.1)
 		(stroke
 			(width 0.508)
 			(type solid)
@@ -105,8 +105,8 @@
 		(uuid "7d46cea7-394a-4dd2-bb29-fedb9deaa5b9")
 	)
 	(fp_circle
-		(center -7.657902 0)
-		(end -7.276902 0)
+		(center -6.8 0.1)
+		(end -6.419 0.1)
 		(stroke
 			(width 0.508)
 			(type solid)
@@ -220,7 +220,7 @@
 	)
 	(pad "1" thru_hole circle
 		(at 0 0)
-		(size 2.413 2.413)
+		(size 3 3)
 		(drill 1.905)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
@@ -228,7 +228,7 @@
 	)
 	(pad "2" thru_hole circle
 		(at 9.499996 0)
-		(size 2.413 2.413)
+		(size 3 3)
 		(drill 1.905)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
