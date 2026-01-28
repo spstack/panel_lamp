@@ -133,7 +133,7 @@
 	(pad "1" thru_hole circle
 		(at -2.4 0)
 		(size 3.5 3.5)
-		(drill 1.7)
+		(drill 1.8)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "8e06b77c-3258-4b68-a320-dc9068e494ee")
@@ -141,10 +141,21 @@
 	(pad "1" thru_hole circle
 		(at 2.4 0)
 		(size 3.5 3.5)
-		(drill 1.7)
+		(drill 1.8)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "93a3f250-ba02-4541-baaa-855c68df7906")
 	)
 	(embedded_fonts no)
+	(model "C:/Users/Scott/Dropbox/documents/Projects/1_PROJECTS/InstrumentPanelLamp/board_design/components/4914/4914.STEP"
+		(offset
+			(xyz 0 1.75 -4.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -90)
+		)
+	)
 )

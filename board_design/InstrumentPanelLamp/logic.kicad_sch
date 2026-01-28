@@ -1541,211 +1541,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_BJT:BC327"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "BC327"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-				(at 5.08 -1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "PNP Transistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO?92*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "BC327_0_1"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy 0.635 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -1.778) (xy 1.778 -2.286) (xy 1.27 -1.27) (xy 2.286 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "BC327_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Transistor_FET:BSD840N"
 			(pin_names
 				(hide yes)
@@ -2100,11 +1895,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3.3V"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
+		(symbol "Transistor_FET:DMG2302U"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -2112,24 +1903,46 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
+				)
+			)
+			(property "Value" "DMG2302U"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Value" "+3.3V"
-				(at 0 3.556 0)
+			(property "Datasheet" "http://www.diodes.com/assets/Datasheets/DMG2302U.pdf"
+				(at 5.08 -3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
+					(hide yes)
 				)
 			)
-			(property "Footprint" ""
+			(property "Description" "4.2A Id, 20V Vds, N-Channel MOSFET, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2138,7 +1951,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" ""
+			(property "ki_keywords" "N-Channel MOSFET"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2147,7 +1960,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2156,19 +1969,22 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3.3V_0_1"
+			(symbol "DMG2302U_0_1"
 				(polyline
 					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
 					)
 					(stroke
 						(width 0)
@@ -2180,7 +1996,43 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
 					)
 					(stroke
 						(width 0)
@@ -2192,7 +2044,88 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.921 0.381) (xy 3.683 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
 					)
 					(stroke
 						(width 0)
@@ -2203,11 +2136,11 @@
 					)
 				)
 			)
-			(symbol "+3.3V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
+			(symbol "DMG2302U_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2215,6 +2148,42 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2669,16 +2638,8 @@
 		(uuid "722a80d5-682b-442c-8b03-152dec5b7830")
 	)
 	(no_connect
-		(at 124.46 151.13)
-		(uuid "8b8ea865-f255-485d-938e-63fca352e1c0")
-	)
-	(no_connect
 		(at 124.46 128.27)
 		(uuid "b118d79d-cd7a-42c3-a6d1-28945fb2084f")
-	)
-	(no_connect
-		(at 124.46 148.59)
-		(uuid "d54a45d1-63d3-4f55-bd0d-f5a5ddcfa535")
 	)
 	(no_connect
 		(at 73.66 133.35)
@@ -3120,6 +3081,16 @@
 	)
 	(wire
 		(pts
+			(xy 124.46 148.59) (xy 133.35 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84ff32d1-d7ac-497b-aa88-809b117ff8f3")
+	)
+	(wire
+		(pts
 			(xy 269.24 60.96) (xy 269.24 63.5)
 		)
 		(stroke
@@ -3177,6 +3148,16 @@
 			(type default)
 		)
 		(uuid "90a0134a-94e7-4d44-8a0e-f48e6b384da2")
+	)
+	(wire
+		(pts
+			(xy 124.46 151.13) (xy 133.35 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91d456e7-135f-4099-b34f-e5d8e75f0b33")
 	)
 	(wire
 		(pts
@@ -3498,6 +3479,16 @@
 		)
 		(uuid "fb5f0f19-3049-40b7-9c35-d148cc55f93b")
 	)
+	(label "pch_gate"
+		(at 50.8 45.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3dff3791-0edc-48e8-82a6-6378a459d961")
+	)
 	(global_label "black_button_in"
 		(shape input)
 		(at 214.63 135.89 180)
@@ -3533,6 +3524,28 @@
 		(uuid "1171a2e3-a96a-4134-86a5-1b7c96002e41")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 149.0954 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "aux2"
+		(shape input)
+		(at 133.35 151.13 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "121ecdb3-2bc1-465e-bfdf-f8c472bbf8ed")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 140.8708 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3586,7 +3599,7 @@
 			)
 		)
 	)
-	(global_label "GPIO21"
+	(global_label "aux1"
 		(shape input)
 		(at 224.79 76.2 180)
 		(fields_autoplaced yes)
@@ -3598,7 +3611,7 @@
 		)
 		(uuid "35487bea-7779-41db-bda3-b20b78693735")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 214.9105 76.2 0)
+			(at 217.2692 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3762,7 +3775,7 @@
 			)
 		)
 	)
-	(global_label "GPIO22"
+	(global_label "aux2"
 		(shape input)
 		(at 259.08 76.2 180)
 		(fields_autoplaced yes)
@@ -3774,7 +3787,7 @@
 		)
 		(uuid "902be5fb-f961-4819-8d27-48c23503e78f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 249.2005 76.2 0)
+			(at 251.5592 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3797,6 +3810,28 @@
 		(uuid "9a496052-5921-4cc6-8564-f642a5a3931d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 271.8016 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "aux1"
+		(shape input)
+		(at 133.35 148.59 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9f7792f4-5466-4c15-8502-7c9ec8589e0e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 140.8708 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4023,80 +4058,6 @@
 				)
 				(justify right)
 				(hide yes)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC327")
-		(at 52.07 38.1 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0c9c241b-6f0d-4b8a-b1b2-ca9c0f860bf8")
-		(property "Reference" "Q2"
-			(at 52.07 29.21 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BC327"
-			(at 52.07 31.75 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 53.975 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
-			(at 52.07 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
-			(at 52.07 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d98214f6-5f92-4ea0-bf5c-33806d7cea3f")
-		)
-		(pin "3"
-			(uuid "33a1089f-9219-4bd9-a6f4-32a5127dc3b1")
-		)
-		(pin "1"
-			(uuid "ba4841c6-b99f-4b31-946c-528c51eebc02")
-		)
-		(instances
-			(project ""
-				(path "/44401b65-794d-4bb9-93d0-c362cc4efc7d/d8f20204-d8f9-4f3a-bcf2-5cdaeddca151"
-					(reference "Q2")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -4391,15 +4352,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
+		(lib_id "power:+5V")
 		(at 254 127 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "25425ce3-0fb7-4d9d-9c55-b0523384f7d6")
-		(property "Reference" "#PWR016"
+		(fields_autoplaced yes)
+		(uuid "20cb9fed-93bd-48b9-bc1e-8da3547869b0")
+		(property "Reference" "#PWR014"
 			(at 254 130.81 0)
 			(effects
 				(font
@@ -4408,13 +4370,12 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "5V"
-			(at 254 123.444 0)
+		(property "Value" "+5V"
+			(at 254 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -4435,7 +4396,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 254 127 0)
 			(effects
 				(font
@@ -4445,78 +4406,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "95a72c89-1ed3-47a8-83c9-d4e374a1e689")
+			(uuid "fcf4789d-619f-43a2-b644-b8152268662f")
 		)
 		(instances
 			(project "InstrumentPanelLamp"
 				(path "/44401b65-794d-4bb9-93d0-c362cc4efc7d/d8f20204-d8f9-4f3a-bcf2-5cdaeddca151"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 157.48 64.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "298c0f8d-27ba-4668-9f63-d2377fee38d7")
-		(property "Reference" "#PWR010"
-			(at 157.48 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "5V"
-			(at 157.48 61.214 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 157.48 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 157.48 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0f0ae332-863b-4292-9890-6d2ce9513671")
-		)
-		(instances
-			(project "InstrumentPanelLamp"
-				(path "/44401b65-794d-4bb9-93d0-c362cc4efc7d/d8f20204-d8f9-4f3a-bcf2-5cdaeddca151"
-					(reference "#PWR010")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -4871,6 +4766,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 220.98 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "34cc382d-b9be-44df-aed0-76972c0052a9")
+		(property "Reference" "#PWR010"
+			(at 220.98 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 220.98 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 220.98 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 220.98 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e2b77036-a6b6-4736-bb11-e96233027fe5")
+		)
+		(instances
+			(project "InstrumentPanelLamp"
+				(path "/44401b65-794d-4bb9-93d0-c362cc4efc7d/d8f20204-d8f9-4f3a-bcf2-5cdaeddca151"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 256.54 49.53 0)
 		(unit 1)
@@ -4964,7 +4925,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_A-405_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_SMA_Handsoldering"
 			(at 104.14 41.91 0)
 			(effects
 				(font
@@ -5448,72 +5409,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 220.98 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "52e897b5-23d1-4424-ac8d-9d219e26c731")
-		(property "Reference" "#PWR014"
-			(at 220.98 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "5V"
-			(at 220.98 123.444 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 220.98 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 220.98 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 220.98 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b58e30cd-cef5-41ad-a822-cb93f6ae945b")
-		)
-		(instances
-			(project "InstrumentPanelLamp"
-				(path "/44401b65-794d-4bb9-93d0-c362cc4efc7d/d8f20204-d8f9-4f3a-bcf2-5cdaeddca151"
-					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 63.5 162.56 0)
 		(unit 1)
@@ -5577,6 +5472,80 @@
 			(project "InstrumentPanelLamp"
 				(path "/44401b65-794d-4bb9-93d0-c362cc4efc7d/d8f20204-d8f9-4f3a-bcf2-5cdaeddca151"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMG2302U")
+		(at 52.07 38.1 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5bfc5ec2-fe59-4c51-824f-ffcd8512cee5")
+		(property "Reference" "Q1"
+			(at 52.07 29.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DMG2302U"
+			(at 52.07 31.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 53.975 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.diodes.com/assets/Datasheets/DMG2302U.pdf"
+			(at 55.88 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "4.2A Id, 20V Vds, N-Channel MOSFET, SOT-23"
+			(at 52.07 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "840edad5-54e7-41d5-bc75-309e954ce37e")
+		)
+		(pin "2"
+			(uuid "7a8e0d5a-77d8-40f7-8084-7625017ede8d")
+		)
+		(pin "3"
+			(uuid "140ac716-e1fe-495f-baf1-c0067519bf52")
+		)
+		(instances
+			(project ""
+				(path "/44401b65-794d-4bb9-93d0-c362cc4efc7d/d8f20204-d8f9-4f3a-bcf2-5cdaeddca151"
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -6300,72 +6269,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 34.29 31.75 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "980557b6-c54b-47f4-8e86-0bd0aa10a92a")
-		(property "Reference" "#PWR04"
-			(at 34.29 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "5V"
-			(at 34.29 28.194 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 34.29 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 34.29 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "94124b44-3735-4a75-920c-e46bf16760d1")
-		)
-		(instances
-			(project "InstrumentPanelLamp"
-				(path "/44401b65-794d-4bb9-93d0-c362cc4efc7d/d8f20204-d8f9-4f3a-bcf2-5cdaeddca151"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Reference_Current:LT3092xST")
 		(at 76.2 35.56 90)
 		(mirror x)
@@ -6664,6 +6567,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 157.48 64.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c48b9daf-ec54-4f81-8a7b-11b7395423f7")
+		(property "Reference" "#PWR04"
+			(at 157.48 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 157.48 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 157.48 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2e36ad1e-4ca6-4e79-a99b-b5301fd8c197")
+		)
+		(instances
+			(project "InstrumentPanelLamp"
+				(path "/44401b65-794d-4bb9-93d0-c362cc4efc7d/d8f20204-d8f9-4f3a-bcf2-5cdaeddca151"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 269.24 67.31 0)
 		(unit 1)
@@ -6936,6 +6905,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 34.29 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6da21f5-032d-49ee-a713-8bda5a985866")
+		(property "Reference" "#PWR019"
+			(at 34.29 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 34.29 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 34.29 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 34.29 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a10259e0-b9dd-41c0-80e3-fccefb50aa39")
+		)
+		(instances
+			(project "InstrumentPanelLamp"
+				(path "/44401b65-794d-4bb9-93d0-c362cc4efc7d/d8f20204-d8f9-4f3a-bcf2-5cdaeddca151"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D")
 		(at 55.88 139.7 270)
 		(unit 1)
@@ -6963,7 +6998,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_A-405_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_SMA_Handsoldering"
 			(at 55.88 139.7 0)
 			(effects
 				(font

@@ -235,4 +235,15 @@
 		(uuid "f69b04dd-4b2a-4e4f-8c39-f8628f87fbf5")
 	)
 	(embedded_fonts no)
+	(model "C:/Users/Scott/Dropbox/documents/Projects/1_PROJECTS/InstrumentPanelLamp/board_design/components/OSTYK51102030/OSTYK51102030/OSTYK51102030.STEP"
+		(offset
+			(xyz 4.75 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
 )

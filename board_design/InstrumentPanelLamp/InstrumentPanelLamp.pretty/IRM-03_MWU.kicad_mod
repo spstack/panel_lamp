@@ -283,4 +283,15 @@
 		(uuid "b47805b3-c3ae-48e4-b185-1256ebaa75aa")
 	)
 	(embedded_fonts no)
+	(model "C:/Users/Scott/Dropbox/documents/Projects/1_PROJECTS/InstrumentPanelLamp/board_design/components/IRM_03_5/IRM-03-5.STEP"
+		(offset
+			(xyz 9 -15.25 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 90)
+		)
+	)
 )
