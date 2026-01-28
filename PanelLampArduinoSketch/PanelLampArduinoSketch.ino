@@ -13,7 +13,10 @@ bool debug = false;
 // Task periods (in ms)
 #define BUTTON_TASK_PERIOD_MS 10
 #define LED_TASK_PERIOD_MS 20
-#define KNOB_TASK_PERIOD_MS 50
+#define KNOB_TASK_PERIOD_MS 100
+
+// RGB cycle period (in ms) - time for one color to fade to the next
+#define RGB_CYCLE_COLOR_PERIOD_MS 5000
 
 // Knob voltage range (in mV)
 #define KNOB_VOLTAGE_MAX_POS 1400
@@ -44,7 +47,10 @@ typedef enum {
     LED_MODE_WHITE_ONLY = 1,
     LED_MODE_WHITE_FLICKER = 2,
     LED_MODE_RGB_CYCLE = 3,
-    LED_NUM_MODES = 4,
+    LED_MODE_RED_ONLY = 4,
+    LED_MODE_GREEN_ONLY = 5,
+    LED_MODE_BLUE_ONLY = 6,
+    LED_NUM_MODES = 7,
 } led_mode_e;
 
 // Structure to hold all panel state data that can be
@@ -66,6 +72,7 @@ typedef struct {
     uint8_t white_led_brightness;
 
     uint32_t knob_position_mv;
+    uint32_t rgb_cycle_timer_ms;  // Timer for RGB cycling
 
 } panel_state_t;
 
@@ -92,7 +99,8 @@ bool task_read_knob(panel_state_t* state);
 uint32_t sample_knob_adc_mv();
 void knob_power_on();
 void knob_power_off();
-
+void update_led_cycle_state(panel_state_t* state, uint8_t brightness);
+void init_state(panel_state_t* state);
 
 // FUNCTION DEFINITIONS
 
@@ -111,6 +119,10 @@ void setup() {
     pinMode(RED_LED_PIN, OUTPUT);
     pinMode(GREEN_LED_PIN, OUTPUT);
     pinMode(BLUE_LED_PIN, OUTPUT);
+    analogWrite(WHITE_LED_PIN, 0);
+    analogWrite(RED_LED_PIN, 0);
+    analogWrite(GREEN_LED_PIN, 0);
+    analogWrite(BLUE_LED_PIN, 0);
 
     // Setup ADC inputs
     pinMode(KNOB_IN_PIN, INPUT);
@@ -140,13 +152,14 @@ void init_state(panel_state_t* state) {
     state->red_button_pressed = false;
 
     // Init LED brightness levels
-    state->led_mode = LED_MODE_OFF; // not used currently
+    state->led_mode = LED_MODE_WHITE_ONLY;
     state->red_led_brightness = 0;
     state->green_led_brightness = 0;
     state->blue_led_brightness = 0;
     state->white_led_brightness = 50;
 
     state->knob_position_mv = 0;
+    state->rgb_cycle_timer_ms = 0;
 }
 
 /**
@@ -167,8 +180,14 @@ void knob_power_on() {
  * Sample the knob ADC and return the voltage in mV
  */
 uint32_t sample_knob_adc_mv() {
+    const int NUM_SAMPLES = 10;
+    uint32_t adc_value = 0;
+
     // Read ADC value and convert to mV
-    uint32_t adc_value = (uint32_t)analogRead(KNOB_IN_PIN);
+    for (int i = 0; i < NUM_SAMPLES; i++) {
+        adc_value += analogRead(KNOB_IN_PIN);
+    }
+    adc_value /= NUM_SAMPLES;
 
     // Assuming 10-bit ADC and 5V reference
     uint32_t voltage_mv = (adc_value * 5000) / 1023;
@@ -234,13 +253,44 @@ bool task_update_buttons(panel_state_t* state) {
 
 
 /**
+ * Helper function to update RGB cycle state (called from task_update_leds)
+ */
+void update_led_cycle_state(panel_state_t* state, uint8_t brightness) {
+    uint32_t cycle_time_ms = state->rgb_cycle_timer_ms % (3 * RGB_CYCLE_COLOR_PERIOD_MS);
+    uint8_t current_color = cycle_time_ms / RGB_CYCLE_COLOR_PERIOD_MS;  // 0=Red, 1=Green, 2=Blue
+    uint8_t fade_progress = (cycle_time_ms % RGB_CYCLE_COLOR_PERIOD_MS) * 255 / RGB_CYCLE_COLOR_PERIOD_MS;
+
+    state->rgb_cycle_timer_ms += LED_TASK_PERIOD_MS;
+
+    // Set white to zero
+    state->white_led_brightness = 0;
+
+    if (current_color == 0) {
+        // Fading from Red to Green
+        state->red_led_brightness = brightness * (255 - fade_progress) / 255;
+        state->green_led_brightness = brightness * fade_progress / 255;
+        state->blue_led_brightness = 0;
+    } else if (current_color == 1) {
+        // Fading from Green to Blue
+        state->red_led_brightness = 0;
+        state->green_led_brightness = brightness * (255 - fade_progress) / 255;
+        state->blue_led_brightness = brightness * fade_progress / 255;
+    } else {
+        // Fading from Blue to Red
+        state->red_led_brightness = brightness * fade_progress / 255;
+        state->green_led_brightness = 0;
+        state->blue_led_brightness = brightness * (255 - fade_progress) / 255;
+    }
+}
+
+/**
  * Task called from main loop to update LED states based on panel state
  */
 bool task_update_leds(panel_state_t* state) {
 
-    uint8_t brightness = (state->knob_position_mv - KNOB_VOLTAGE_MIN_POS) * 100 / (KNOB_VOLTAGE_MAX_POS - KNOB_VOLTAGE_MIN_POS);
+    uint8_t brightness = (state->knob_position_mv - KNOB_VOLTAGE_MIN_POS) * 255 / (KNOB_VOLTAGE_MAX_POS - KNOB_VOLTAGE_MIN_POS);
     if (state->knob_position_mv >= KNOB_VOLTAGE_MAX_POS) {
-        brightness = 100;
+        brightness = 255;
     } else if (state->knob_position_mv <= KNOB_VOLTAGE_MIN_POS) {
         brightness = 0;
     }
@@ -278,12 +328,30 @@ bool task_update_leds(panel_state_t* state) {
                 state->blue_led_brightness = 0;
                 break;
 
-            case LED_MODE_RGB_CYCLE:
-                // Cycle through RGB colors
+            case LED_MODE_RED_ONLY:
+                state->white_led_brightness = 0;
                 state->red_led_brightness = brightness;
+                state->green_led_brightness = 0;
+                state->blue_led_brightness = 0;
+                break;
+
+            case LED_MODE_GREEN_ONLY:
+                state->white_led_brightness = 0;
+                state->red_led_brightness = 0;
                 state->green_led_brightness = brightness;
+                state->blue_led_brightness = 0;
+                break;
+
+            case LED_MODE_BLUE_ONLY:
+                state->white_led_brightness = 0;
+                state->red_led_brightness = 0;
+                state->green_led_brightness = 0;
                 state->blue_led_brightness = brightness;
-                state->white_led_brightness = brightness;
+                break;
+
+            case LED_MODE_RGB_CYCLE:
+                // Cycle through RGB colors with smooth fading transitions
+                update_led_cycle_state(state, brightness);
                 break;
 
             default:
