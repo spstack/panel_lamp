@@ -5,3 +5,14 @@
 # Compiled object files
 *.exe
 *.bin
+
+# Kicad misc files
+*.lck
+*.lock
+*.kicad_pcb-bak
+*.kicad_sch-bak
+
+# Editor files
+*.swp
+.vscode
+.history
